@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Database Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+
+                <h2>🤖 AI Assistant</h2>
+
+                <button id="newChatButton">
+                    + New Chat
+                </button>
+
+            </div>
+
+
+            <div class="conversation-title">
+                Chats
+            </div>
+
+
+            <div
+                id="conversationList"
+                class="conversation-list">
+            </div>
+
+
+            <div class="sidebar-footer">
+
+                <span>🧠 Memory Enabled</span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CHAT AREA
+        ========================== -->
+
+        <main class="main">
+
+            <div class="header">
+
+                <div>
+
+                    <h1 id="chatTitle">
+                        AI Database Assistant
+                    </h1>
+
+                    <p>
+                        Ask questions about your MySQL database
+                    </p>
+
+                </div>
+
+
+                <span class="status" id="serverStatus">
+                      ● Online
+                </span>
+
+            </div>
+
+
+            <!-- CHAT BOX -->
+
+            <div
+                class="chat-box"
+                id="chatBox">
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="Ask a database question..."
+                    autocomplete="off"
+                >
+
+
+                <button id="askButton">
+                    Ask
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Markdown -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
+
