@@ -27,9 +27,9 @@ def local_execute_query(query: str) -> str:
         if not query:
             return "Query rejected: empty SQL query."
 
-        # ------------------------------------------
+        
         # Check for multiple SQL statements
-        # ------------------------------------------
+       
 
         # Remove one optional trailing semicolon first
         query_without_semicolon = query.rstrip(";").strip()
@@ -52,9 +52,9 @@ def local_execute_query(query: str) -> str:
         if not query_without_semicolon:
             return "Query rejected: empty SQL query."
 
-        # ------------------------------------------
+        
         # Allowed SQL commands
-        # ------------------------------------------
+     
 
         allowed_commands = (
             "select",
@@ -71,9 +71,8 @@ def local_execute_query(query: str) -> str:
                 "Allowed commands: SELECT, SHOW, DESCRIBE, DESC."
             )
 
-        # ------------------------------------------
         # Execute query
-        # ------------------------------------------
+        
 
         conn = get_connection()
         cursor = conn.cursor()
